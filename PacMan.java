@@ -90,26 +90,26 @@ public class PacMan extends JPanel implements ActionListener, KeyListener {
     //Ghosts: b = blue, o = orange, p = pink, r = red
     private String[] tileMap = {
         "XXXXXXXXXXXXXXXXXXX",
-        "X        X        X",
-        "X XX XXX X XXX XX X",
-        "X                 X",
-        "X XX X XXXXX X XX X",
-        "X    X       X    X",
-        "XXXX XXXX XXXX XXXX",
-        "OOOX X       X XOOO",
+        "X X     X X     X X",
+        "X X XXX X X XXX X X",
+        "X X   X   X   X   X",
+        "X XXX XXXXX XXX X X",
+        "X     X   X   X   X",
+        "XXX X X X X X X XXX",
+        "OOOX X X X X X XOOO",
         "XXXX X XXrXX X XXXX",
         "O       bpo       O",
         "XXXX X XXXXX X XXXX",
         "OOOX X       X XOOO",
-        "XXXX X XXXXX X XXXX",
-        "X        X        X",
-        "X XX XXX X XXX XX X",
+        "XXXX XXX X XXX XXXX",
+        "X      X X X      X",
+        "X XXXX X X X XXXX X",
         "X  X     P     X  X",
-        "XX X X XXXXX X X XX",
-        "X    X   X   X    X",
-        "X XXXXXX X XXXXXX X",
-        "X                 X",
-        "XXXXXXXXXXXXXXXXXXX" 
+        "XX X XXXXXXXXX X XX",
+        "X  X X       X X  X",
+        "X XX X XXXXX X XX X",
+        "X          X      X",
+        "XXXXXXXXXXXXXXXXXXX"
     };
 
     HashSet<Block> walls;
@@ -123,7 +123,7 @@ public class PacMan extends JPanel implements ActionListener, KeyListener {
     int score = 0;
     int lives = 3;
     boolean gameOver = false;
-    char nextDirection = 'R'; // buffered input direction
+    char nextDirection = 'R';
 
     PacMan() {
         setPreferredSize(new Dimension(boardWidth, boardHeight));
@@ -229,12 +229,10 @@ public class PacMan extends JPanel implements ActionListener, KeyListener {
     }
 
     public void move() {
-        // Try to apply buffered direction each frame
         if (pacman.direction != nextDirection) {
             pacman.updateDirection(nextDirection);
         }
 
-        // Update Pac-Man image based on actual direction
         if (pacman.direction == 'U') {
             pacman.image = pacmanUpImage;
         }
@@ -342,7 +340,6 @@ public class PacMan extends JPanel implements ActionListener, KeyListener {
             gameOver = false;
             gameLoop.start();
         }
-        // Buffer the desired direction - will be applied in move()
         if (e.getKeyCode() == KeyEvent.VK_UP) {
             nextDirection = 'U';
         }
