@@ -4,3 +4,4 @@
 
 ## Changelog
 - [Changelog #1](Changelog%20%231.md) - Input Responsiveness Fix
+- [Changelog #2](Changelog%20%232.md) - Increased Map Difficulty
