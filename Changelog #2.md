@@ -25,3 +25,5 @@ Replaced the original map with a more difficult design featuring:
 
 ## Result
 The map is significantly more challenging, requiring better planning and strategy to navigate while avoiding ghosts. Players must think ahead and use the narrow corridors more carefully.
+
+

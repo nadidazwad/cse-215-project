@@ -1,0 +1,11 @@
+Champion,5000
+ProGamer,4500
+PacManMaster,4000
+GhostBuster,3500
+DotEater,3000
+MazeRunner,2500
+Player1,2000
+Rookie,1500
+Newbie,1000
+Beginner,500
+
